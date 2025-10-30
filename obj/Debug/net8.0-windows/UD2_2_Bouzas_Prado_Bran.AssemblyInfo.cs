@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UD2_2_Bouzas_Prado_Bran")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e197ec548bc9eaa70459d02f2dd466dcc9744f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("UD2_2_Bouzas_Prado_Bran")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UD2_2_Bouzas_Prado_Bran")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
