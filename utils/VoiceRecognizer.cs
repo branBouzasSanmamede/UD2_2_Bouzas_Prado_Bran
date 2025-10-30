@@ -1,10 +1,13 @@
-﻿using System.Speech.Recognition;
+﻿using System.Diagnostics;
+using System.Speech.Recognition;
+using System.Text;
 using System.Windows;
 
 namespace UD2_2_Bouzas_Prado_Bran.utils
 {
     public class VoiceRecognizer
     {
+        public event Action<string>? EstadoActualizado;
         private SpeechRecognitionEngine _recognizer;
 
         public VoiceRecognizer()
@@ -16,16 +19,15 @@ namespace UD2_2_Bouzas_Prado_Bran.utils
 
         public Task<string> EscucharAsync(int timeoutSeconds = 5)
         {
-            Console.WriteLine("[DEBUG] EscucharAsync iniciado");
             var tcs = new TaskCompletionSource<string>();
+            EstadoActualizado?.Invoke("🎤 Escuchando...");
 
-            _recognizer.LoadGrammar(new DictationGrammar());
-
-            EventHandler<SpeechRecognizedEventArgs> recognizedHandler = null;
+            EventHandler<SpeechRecognizedEventArgs>? recognizedHandler = null;
             recognizedHandler = (s, e) =>
             {
-                Console.WriteLine("[DEBUG] SpeechRecognized: " + e.Result.Text);
-                tcs.TrySetResult(e.Result.Text);
+                string texto = e.Result.Text.Trim();
+                EstadoActualizado?.Invoke($"✅ Reconocido: {texto}");
+                tcs.TrySetResult(texto);
                 _recognizer.SpeechRecognized -= recognizedHandler;
             };
 
@@ -33,26 +35,22 @@ namespace UD2_2_Bouzas_Prado_Bran.utils
 
             _recognizer.RecognizeCompleted += (s, e) =>
             {
-                Console.WriteLine("[DEBUG] RecognizeCompleted");
-                if (!tcs.Task.IsCompleted) tcs.TrySetResult(string.Empty);
+                if (!tcs.Task.IsCompleted)
+                {
+                    EstadoActualizado?.Invoke("⏹️ Reconocimiento completado sin resultado");
+                    tcs.TrySetResult(string.Empty);
+                }
             };
-            try
-            {
-                Console.WriteLine("[DEBUG] Llamando a RecognizeAsync");
-                _recognizer.RecognizeAsync(RecognizeMode.Single);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[ERROR] Excepción en RecognizeAsync: " + ex.Message);
-                tcs.TrySetResult(string.Empty);
-            }
+
+            _recognizer.RecognizeAsync(RecognizeMode.Single);
 
             Task.Run(async () =>
             {
                 await Task.Delay(timeoutSeconds * 1000);
                 if (!tcs.Task.IsCompleted)
                 {
-                    Console.WriteLine("[DEBUG] Timeout alcanzado, cancelando reconocimiento");
+                    Debug.WriteLine("[DEBUG] Timeout alcanzado, cancelando reconocimiento");
+                    EstadoActualizado?.Invoke("⏱️ Tiempo agotado, cancelando reconocimiento");
                     _recognizer.RecognizeAsyncCancel();
                     tcs.TrySetResult(string.Empty);
                 }
@@ -63,6 +61,7 @@ namespace UD2_2_Bouzas_Prado_Bran.utils
 
         public void Dispose()
         {
+            _recognizer.RecognizeAsyncStop();
             _recognizer.Dispose();
         }
     }

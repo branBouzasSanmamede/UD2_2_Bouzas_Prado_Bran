@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|c:\\users\\bran\\desktop\\bran\\interfaces\\ud2_2_bouzas_prado_bran\\utils\\voicerecognizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|solutionrelative:utils\\voicerecognizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|c:\\users\\bran\\desktop\\bran\\interfaces\\ud2_2_bouzas_prado_bran\\windows\\navegador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|solutionrelative:windows\\navegador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|c:\\users\\bran\\desktop\\bran\\interfaces\\ud2_2_bouzas_prado_bran\\utils\\voicerecognizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|solutionrelative:utils\\voicerecognizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16BF324D-958B-4160-BD28-B484F0387F2D}|UD2_2_Bouzas_Prado_Bran.csproj|c:\\users\\bran\\desktop\\bran\\interfaces\\ud2_2_bouzas_prado_bran\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,27 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Navegador.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\windows\\Navegador.xaml.cs",
+              "RelativeDocumentMoniker": "windows\\Navegador.xaml.cs",
+              "ToolTip": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\windows\\Navegador.xaml.cs",
+              "RelativeToolTip": "windows\\Navegador.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T10:44:59.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "VoiceRecognizer.cs",
               "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\utils\\VoiceRecognizer.cs",
               "RelativeDocumentMoniker": "utils\\VoiceRecognizer.cs",
               "ToolTip": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\utils\\VoiceRecognizer.cs",
               "RelativeToolTip": "utils\\VoiceRecognizer.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAYwDAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T10:11:30.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Navegador.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\windows\\Navegador.xaml.cs",
-              "RelativeDocumentMoniker": "windows\\Navegador.xaml.cs",
-              "ToolTip": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\windows\\Navegador.xaml.cs",
-              "RelativeToolTip": "windows\\Navegador.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA5wDwAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T10:44:59.76Z",
+              "WhenOpened": "2025-10-30T09:45:58.94Z",
               "EditorCaption": ""
             },
             {
@@ -63,21 +76,7 @@
               "ToolTip": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\windows\\Navegador.xaml",
               "RelativeToolTip": "windows\\Navegador.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-30T11:38:56.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Bran\\Desktop\\Bran\\Interfaces\\UD2_2_Bouzas_Prado_Bran\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T09:45:58.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T11:38:56.725Z"
             }
           ]
         },

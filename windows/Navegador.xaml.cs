@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 using UD2_2_Bouzas_Prado_Bran.enums;
 using UD2_2_Bouzas_Prado_Bran.utils;
 
@@ -13,6 +14,10 @@ namespace UD2_2_Bouzas_Prado_Bran.windows
             InitializeComponent();
             _mainWindow = mainWindow;
             _voz = voz;
+            _voz.EstadoActualizado += (estado) =>
+            {
+                Dispatcher.Invoke(() => LblEstadoVoz.Content = estado);
+            };
         }
         private void BtnAtras_Click(object sender, RoutedEventArgs e) { if (web.CanGoBack) web.GoBack(); }
         private void BtnAdelante_Click(object sender, RoutedEventArgs e) { if (web.CanGoForward) web.GoForward(); }
@@ -29,43 +34,22 @@ namespace UD2_2_Bouzas_Prado_Bran.windows
         }
         private async void BtnVoz_Click(object sender, RoutedEventArgs e)
         {
-            try
+            string texto = await _voz.EscucharAsync();
+
+            if (!string.IsNullOrWhiteSpace(texto))
             {
-                Console.WriteLine("[DEBUG] Botón de voz pulsado");
-                LblEstadoVoz.Content = "🎤 Escuchando...";
-                string texto = await _voz.EscucharAsync();
+                TxtBusqueda.Text = texto;
 
-                Console.WriteLine($"[DEBUG] Resultado de voz: '{texto}'");
-
-                if (!string.IsNullOrWhiteSpace(texto))
+                var acciones = new Dictionary<NavegadorEnums, Action>
                 {
-                    TxtBusqueda.Text = texto;
-                    Console.WriteLine("[DEBUG] Texto no vacío, ejecutando acción...");
-                    var acciones = new Dictionary<NavegadorEnums, Action>
-                    {
-                        { NavegadorEnums.Google, () => web.Source = new Uri("https://www.google.com") },
-                        { NavegadorEnums.YouTube, () => web.Source = new Uri("https://www.youtube.com") },
-                        { NavegadorEnums.Wikipedia, () => web.Source = new Uri("https://www.wikipedia.org") },
-                        { NavegadorEnums.Buscar, () => BtnBuscar_Click(sender, e) },
-                        { NavegadorEnums.Cerrar, () => this.Close() }
-                    };
+                    { NavegadorEnums.Google, () => web.Source = new Uri("https://www.google.com") },
+                    { NavegadorEnums.YouTube, () => web.Source = new Uri("https://www.youtube.com") },
+                    { NavegadorEnums.Wikipedia, () => web.Source = new Uri("https://www.wikipedia.org") },
+                    { NavegadorEnums.Buscar, () => BtnBuscar_Click(sender, e) },
+                    { NavegadorEnums.Cerrar, () => this.Close() }
+                };
 
-                    EnumHelper.EjecutarOpcion<NavegadorEnums>(texto, acciones);
-                }
-                else
-                {
-                    Console.WriteLine("[DEBUG] No se reconoció nada");
-                    LblEstadoVoz.Content = "❌ No se reconoció nada";
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("[ERROR] Excepción en BtnVoz_Click: " + ex.Message);
-            }
-            finally
-            {
-                await Task.Delay(1500);
-                LblEstadoVoz.Content = "";
+                EnumHelper.EjecutarOpcion<NavegadorEnums>(texto, acciones);
             }
         }
         private void BtnVolver_Click(object sender, RoutedEventArgs e)

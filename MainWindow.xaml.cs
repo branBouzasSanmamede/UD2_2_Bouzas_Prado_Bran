@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Speech.Recognition;
+using System.Windows;
 using UD2_2_Bouzas_Prado_Bran.utils;
 using UD2_2_Bouzas_Prado_Bran.windows;
 
