@@ -2,7 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="windows\Archivo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="windows\Musica.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="windows\Navegador.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="windows\OpcionesBase.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

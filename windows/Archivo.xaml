@@ -1,0 +1,46 @@
+﻿<Window x:Class="UD2_2_Bouzas_Prado_Bran.windows.Archivo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestor de Archivos por Voz"
+        Height="600"
+        Width="800"
+        ResizeMode="NoResize"
+        Background="#F4F4F4"
+        WindowStartupLocation="Manual"
+        Loaded="Window_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#E0E0E0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BtnEscuchar" Grid.Column="0" Content="🎤 Escuchar" Click="BtnEscuchar_Click" Width="150" Height="40" Margin="10"/>
+            <Button x:Name="BtnRefrescar" Grid.Column="1" Content="🔁 Limpiar lista" Click="BtnRefrescar_Click" Width="150" Height="40" Margin="10"/>
+            <Button x:Name="BtnVolver" Grid.Column="2" Content="Menú principal" Click="BtnVolver_Click" Width="150" Height="40" Margin="10"/>
+        </Grid>
+
+        <Label x:Name="LblEstadoVoz" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="DarkBlue"/>
+
+        <Grid Grid.Row="2" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Archivos gestionados por voz:" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <Border Grid.Row="1" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Background="White" Padding="10">
+                <ListBox x:Name="LstArchivos" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

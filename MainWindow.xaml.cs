@@ -21,15 +21,13 @@ namespace UD2_2_Bouzas_Prado_Bran
         }
         private void BtnArchivo_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Botón 'Abrir archivo' pulsado");
+            new Archivo(this, _voz).Show();
+            this.Hide();
         }
         private void BtnMusica_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Botón 'Abrir música' pulsado");
-        }
-        private void BtnAyuda_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Botón 'AYUDA!' pulsado");
+            new Musica(this, _voz).Show();
+            this.Hide();
         }
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {

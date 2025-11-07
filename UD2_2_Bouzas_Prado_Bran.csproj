@@ -9,7 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\default.png" />
     <None Remove="img\logo.png" />
+    <None Remove="img\songs\1.png" />
+    <None Remove="img\songs\2.png" />
+    <None Remove="img\stop.png" />
+    <None Remove="songs\1.mp3" />
+    <None Remove="songs\2.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\songs\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\songs\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="songs\1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -18,9 +36,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\songs\default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="img\songs\stop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="songs\2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

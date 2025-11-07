@@ -4,7 +4,15 @@
     {
         public static bool EsOpcionValida<TEnum>(string valor, out TEnum opcion) where TEnum : struct
         {
-            return Enum.TryParse(valor, true, out opcion) && Enum.IsDefined(typeof(TEnum), opcion);
+            if (string.IsNullOrWhiteSpace(valor))
+            {
+                opcion = default;
+                return false;
+            }
+
+            valor = valor.Trim();
+
+            return Enum.TryParse(valor.Replace(" ", ""), true, out opcion) && Enum.IsDefined(typeof(TEnum), opcion) ? true : false;
         }
 
         public static void EjecutarOpcion<TEnum>(string valor, Dictionary<TEnum, Action> acciones) where TEnum : struct

@@ -6,6 +6,6 @@
         YouTube,
         Wikipedia,
         Buscar,     
-        Cerrar
+        Volver
     }
 }

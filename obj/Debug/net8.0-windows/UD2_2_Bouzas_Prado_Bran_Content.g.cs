@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("songs/1.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("songs/2.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("webview2loader.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("webview2loader.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("webview2loader.dll")]

@@ -1,2 +1,3 @@
-2025/10/30-12:46:01.544 2dc0 Creating DB C:\Users\Bran\Desktop\Bran\Interfaces\UD2_2_Bouzas_Prado_Bran\bin\Debug\net8.0-windows\UD2_2_Bouzas_Prado_Bran.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/10/30-12:46:01.566 2dc0 Reusing MANIFEST C:\Users\Bran\Desktop\Bran\Interfaces\UD2_2_Bouzas_Prado_Bran\bin\Debug\net8.0-windows\UD2_2_Bouzas_Prado_Bran.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/07-05:39:50.605 3c3c Reusing MANIFEST C:\Users\bran\Desktop\_temp\UD2_2_Bouzas_Prado_Bran\bin\Debug\net8.0-windows\UD2_2_Bouzas_Prado_Bran.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/11/07-05:39:50.615 3c3c Recovering log #3
+2025/11/07-05:39:50.617 3c3c Reusing old log C:\Users\bran\Desktop\_temp\UD2_2_Bouzas_Prado_Bran\bin\Debug\net8.0-windows\UD2_2_Bouzas_Prado_Bran.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 

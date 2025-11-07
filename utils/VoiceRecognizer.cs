@@ -25,7 +25,7 @@ namespace UD2_2_Bouzas_Prado_Bran.utils
             EventHandler<SpeechRecognizedEventArgs>? recognizedHandler = null;
             recognizedHandler = (s, e) =>
             {
-                string texto = e.Result.Text.Trim();
+                string texto = e.Result.Text.Trim().ToLower();
                 EstadoActualizado?.Invoke($"✅ Reconocido: {texto}");
                 tcs.TrySetResult(texto);
                 _recognizer.SpeechRecognized -= recognizedHandler;
